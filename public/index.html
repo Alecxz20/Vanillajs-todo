@@ -4,8 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icons8-check-mark-32.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <h1>Todo App!!!</h1>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/icons8-check-mark-48.png" alt="header icon" />
+          <h1>ToDo App</h1>
+        </div>
+        <img
+          class="ham"
+          src="./assets/icons8-hamburger-50.png"
+          alt="menu icon"
+        />
+      </div>
+    </header>
+    <section class="content">
+      <div class="sidebarMenu">
+        <ul class="projects">
+          <li>
+            <img src="./assets/icons8-inbox-50.png" alt="inbox icon" />
+            <p>Inbox</p>
+          </li>
+          <li>
+            <img src="./assets/icons8-suitcase-64.png" alt="inbox icon" />
+            <p>Work</p>
+          </li>
+          <li>
+            <img src="./assets/icons8-study-64.png" alt="inbox icon" />
+            <p>Study</p>
+          </li>
+        </ul>
+        <button class="sidebarBtn">
+          <img src="./assets/icons8-plus-64.png" alt="plus icon" />
+          <p>Add Project</p>
+        </button>
+      </div>
+      <div class="main">
+        <h2 class="content__title">Inbox</h2>
+        <div class="task">
+          <div class="task__left">
+            <div class="radio-btn"></div>
+            <p>Work on the odin project</p>
+          </div>
+          <div class="task__right">
+            <p>08/06/2023</p>
+          </div>
+        </div>
+        <div class="task">
+          <div class="task__left">
+            <div class="radio-btn"></div>
+            <p>Work on the odin project</p>
+          </div>
+          <div class="task__right">
+            <p>08/06/2023</p>
+          </div>
+        </div>
+        <div class="addTask">
+          <p>+</p>
+          <p>Add Task</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>By Alexis</p>
+    </footer>
   </body>
 </html>

@@ -1,3 +1,151 @@
+:root {
+  --primary-color: #bae6fd;
+  --secondary-color: #7dd3fc;
+  --strong-color: #172554;
+  --primary-light-color: #f0f9ff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 * {
-  background-color: #b2b2b2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--primary-color);
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: var(--strong-color);
+  color: var(--primary-light-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ham {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarMenu {
+  background-color: var(--secondary-color);
+  padding: 2rem 10%;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.sidebarBtn {
+  background-color: var(--secondary-color);
+  border: none;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  outline: none;
+}
+
+.sidebarBtn img {
+  width: 28px;
+  height: 28px;
+}
+
+.projects {
+  list-style-type: none;
+}
+
+.projects li {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projects li img {
+  width: 24px;
+  height: 24px;
+}
+
+.content__title {
+  margin: 2rem 0;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.task__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.radio-btn {
+  border: solid 3px var(--strong-color);
+  width: 24px;
+  height: 24px;
+}
+
+.addTask {
+  background-color: var(--primary-light-color);
+  color: var(--strong-color);
+  padding: 0.8rem 1.2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--strong-color);
+  color: var(--primary-light-color);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.active {
+  display: block;
 }

@@ -1,4 +1,8 @@
 import './index.css';
 
-console.log('Hello World!');
-console.log('Another Hello World!');
+const ham = document.querySelector('.ham');
+const menu = document.querySelector('.sidebarMenu');
+
+ham.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
