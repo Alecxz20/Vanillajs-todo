@@ -101,10 +101,23 @@ header {
   cursor: pointer;
   padding: 0.6rem 1rem;
   border-radius: 0.4rem;
+  justify-content: space-between;
 }
 
 .projects li:hover {
   background-color: var(--primary-light-color);
+  .li-right {
+    opacity: 1;
+  }
+}
+
+.li-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.li-right {
+  opacity: 0;
 }
 
 .projects li img {
@@ -158,7 +171,7 @@ footer {
   text-align: center;
   background-color: var(--strong-color);
   color: var(--primary-light-color);
-  position: absolute;
+  position: sticky;
   bottom: 0;
   width: 100%;
   padding: 1rem 0;
@@ -168,9 +181,49 @@ div.active {
   display: block;
 }
 
+.sidebarAddCancel {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-top: 0.4rem;
+}
+
+#inputWorkspace {
+  width: 150px;
+  height: 30px;
+  outline: none;
+  background-color: var(--primary-light-color);
+  border: none;
+  border-radius: 0.4rem;
+  padding-left: 0.5rem;
+}
+
+.inputBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 150px;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.inputBtn button {
+  height: 30px;
+  background-color: var(--strong-color);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.hide {
+  display: none;
+}
+
 @media (min-width: 620px) {
   .content {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 300px 1fr;
   }
   .sidebarMenu {
     align-self: stretch;

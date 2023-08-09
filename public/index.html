@@ -26,24 +26,18 @@
     </header>
     <section class="content">
       <div class="sidebarMenu">
-        <ul class="projects">
-          <li>
-            <img src="./assets/icons8-inbox-50.png" alt="inbox icon" />
-            <p>Inbox</p>
-          </li>
-          <li>
-            <img src="./assets/icons8-suitcase-64.png" alt="inbox icon" />
-            <p>Work</p>
-          </li>
-          <li>
-            <img src="./assets/icons8-study-64.png" alt="inbox icon" />
-            <p>Study</p>
-          </li>
-        </ul>
+        <ul class="projects"></ul>
         <button class="sidebarBtn">
           <img src="./assets/icons8-plus-64.png" alt="plus icon" />
           <p>Add Project</p>
         </button>
+        <div class="sidebarAddCancel hide">
+          <input type="text" id="inputWorkspace" />
+          <div class="inputBtn">
+            <button class="cancel">Cancel</button>
+            <button class="add">Add</button>
+          </div>
+        </div>
       </div>
       <div class="main">
         <h2 class="content__title">Inbox</h2>
