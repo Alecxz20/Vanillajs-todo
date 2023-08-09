@@ -50,6 +50,7 @@ header {
 .main {
   width: 80%;
   margin: 0 auto;
+  min-height: calc(100vh - 51px - 80px);
 }
 
 .content {
@@ -74,6 +75,13 @@ header {
   justify-content: flex-start;
   align-items: center;
   outline: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.sidebarBtn:hover {
+  background-color: var(--primary-light-color);
 }
 
 .sidebarBtn img {
@@ -90,6 +98,13 @@ header {
   display: flex;
   gap: 1rem;
   align-items: center;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.projects li:hover {
+  background-color: var(--primary-light-color);
 }
 
 .projects li img {
@@ -118,7 +133,6 @@ header {
 }
 
 .radio-btn {
-  border: solid 3px var(--strong-color);
   width: 24px;
   height: 24px;
 }
@@ -136,6 +150,10 @@ header {
   align-items: center;
 }
 
+.addTask img {
+  width: 28px;
+}
+
 footer {
   text-align: center;
   background-color: var(--strong-color);
@@ -146,6 +164,23 @@ footer {
   padding: 1rem 0;
 }
 
-.active {
+div.active {
   display: block;
+}
+
+@media (min-width: 620px) {
+  .content {
+    flex-direction: row;
+  }
+  .sidebarMenu {
+    align-self: stretch;
+    padding-inline: 2rem;
+    display: block;
+  }
+  .main {
+    padding-inline: 10%;
+  }
+  .ham {
+    display: none;
+  }
 }
