@@ -51,6 +51,7 @@ header {
   width: 80%;
   margin: 0 auto;
   min-height: calc(100vh - 51px - 80px);
+  order: 2;
 }
 
 .content {
@@ -63,6 +64,7 @@ header {
   padding: 2rem 10%;
   font-size: 1.2rem;
   display: none;
+  order: 1;
 }
 
 .sidebarBtn {
@@ -139,10 +141,17 @@ header {
   justify-content: space-between;
 }
 
+.task__right,
 .task__left {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.img__close {
+  width: 22px;
+  height: 18px;
+  cursor: pointer;
 }
 
 .radio-btn {
@@ -150,6 +159,7 @@ header {
   height: 24px;
 }
 
+.addTaskInput,
 .addTask {
   background-color: var(--primary-light-color);
   color: var(--strong-color);
@@ -161,6 +171,21 @@ header {
   gap: 1rem;
   cursor: pointer;
   align-items: center;
+}
+
+.addTaskInput {
+  flex-direction: column;
+}
+
+.firstContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.addTaskInputText {
+  padding: 0.5rem;
 }
 
 .addTask img {
