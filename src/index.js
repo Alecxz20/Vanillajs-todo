@@ -1,4 +1,11 @@
 import './index.css';
+import favicon from '../public/assets/icons8-check-mark-32.png';
+import inboxIcon from '../public/assets/icons8-inbox-50.png';
+import workIcon from '../public/assets/icons8-suitcase-64.png';
+import studyIcon from '../public/assets/icons8-study-64.png';
+import plusIcon from '../public/assets/icons8-plus-64.png';
+import closeIcon from '../public/assets/icons8-close-48.png';
+import logo from '../public/assets/icons8-check-mark-48.png';
 
 class Workspace {
   constructor(name = 'Default', img = './assets/icons8-stack-50.png') {
@@ -51,9 +58,9 @@ const database = (function () {
   }
 
   (function initialState() {
-    const inbox = new Workspace('Inbox', './assets/icons8-inbox-50.png');
-    const work = new Workspace('Work', './assets/icons8-suitcase-64.png');
-    const study = new Workspace('Study', './assets/icons8-study-64.png');
+    const inbox = new Workspace('Inbox', `${inboxIcon}`);
+    const work = new Workspace('Work', `${workIcon}`);
+    const study = new Workspace('Study', `${studyIcon}`);
     addToWorkspaceBoard(inbox, work, study);
   })();
 
@@ -65,19 +72,22 @@ const database = (function () {
 })();
 
 const UI = (function () {
+  document.querySelector('.headerIcon').src = logo;
+  document.querySelector('.fav').href = favicon;
+
   function listItem(name, img) {
     return `
         <div class="li-left">
             <img src=${img} alt='${name} icon' />
             <p>${name}</p>
         </div>
-        <img class="li-right" src="./assets/icons8-close-48.png" alt="close icon" />
+        <img class="li-right" src=${closeIcon} alt="close icon" />
     `;
   }
 
   (function renderSidebarMenu() {
     const projects = document.querySelector('.projects');
-
+    document.querySelector('.sidebarBtnIcon').src = plusIcon;
     database.getWorkspaceBoard().forEach((item) => {
       const htmlElement = document.createElement('li');
       htmlElement.innerHTML = listItem(item.getName(), item.getImg());
@@ -216,7 +226,7 @@ const UI = (function () {
         date.innerText = taskDate;
         secondDiv.appendChild(date);
         const close = createDomElement('img', 'img__close');
-        close.src = './assets/icons8-x-50.png';
+        close.src = closeIcon;
         close.addEventListener('click', deleteTaskToDatabase);
         secondDiv.appendChild(close);
         li.appendChild(secondDiv);
@@ -226,7 +236,7 @@ const UI = (function () {
 
       const addTask = createDomElement('div', 'addTask');
       const addTaskImg = createDomElement('img', 'addTaskImg');
-      addTaskImg.src = './assets/icons8-plus-64.png';
+      addTaskImg.src = plusIcon;
       const AddTaskP = createDomElement('p', 'AddTaskP');
       AddTaskP.innerText = 'Add Task';
       addTask.addEventListener('click', addNewTaskBtn);
